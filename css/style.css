@@ -1,0 +1,277 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-size: 0;
+	font-family: 'poppins';
+	color: rgb(223, 223, 221);
+	text-decoration: none;
+}
+h2 {
+	font-size: 28px;
+	font-weight: 300;
+}
+h3 {
+	font-size: 22px;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: poppins;
+	src: url(../fonts/Poppins-Regular.ttf);
+	font-family: poppins-bold;
+	src: url(../fonts/Poppins-Bold.ttf);
+	font-family: poppins-thin;
+	src: url(../fonts/Poppins-Light.ttf);
+}
+body {
+	background: #000;
+}
+nav {
+	position: fixed;
+	width: 100%;
+	min-height: 35px;
+	background-color: #111;
+	z-index: 1;
+}
+
+nav a {
+	font-family: poppins;
+	font-size: 12px;
+	color: rgb(223, 223, 221);
+	text-decoration: none;
+	line-height: 35px;
+	transition: color 0.2s, text-shadow 0.4s;
+}
+
+nav a:hover {
+	color: rgb(255, 255, 239);
+	text-shadow: 0 0 6px rgba(255, 255, 169, 0.7);
+}
+.menu-mobile {
+	position: relative;
+	display: none;
+}
+.menu {
+	display: none;
+}
+@media (width > 790px){
+	.menu {
+		display:block;
+	}
+}
+
+@media (790px >= width){
+	.menu-mobile{
+		display: block;
+	}
+}
+.mobile-wrap{
+	width: 100%;
+	max-width: 760px;
+}
+
+.mobile-icon {
+	position: absolute;
+	right: 15px;
+	top: 5px;
+	height: 25px;
+}
+
+.wrap {
+	position: absolute;
+	right: 50%;
+	width: 100%;
+	max-width: 1200px;
+	transform: translateX(50%);
+}
+
+.menu-center {
+	position: absolute;
+	width: 100%;
+	top: 0px;
+	text-align: center;
+}
+
+.menu-item {
+	display: inline-block;
+	padding: 0 1vw;
+	line-height: 35px;
+}
+
+.icon img {
+	height: 19px;
+	transform: translateY(4px);
+}
+
+.mega-menu {
+	position: absolute;
+	left: 50%;
+	width: 100vw;
+	height: auto;
+	min-height: 30px;
+	transform: translateY(calc(-100% - 40px)) translateX(-50%);
+	padding: 40px;
+	text-align: left;
+	background-color: #111;
+	transition: transform 0.5s;
+	z-index: -1;
+}
+.mega-menu:hover {
+	transform: translateY(-12px) translateX(-50%);
+}
+.menu-item a:hover ~ .mega-menu {
+	transform: translateY(-12px) translateX(-50%);
+}
+.mega-menu h3 {
+	font-family: poppins-thin;
+	font-size: 12px;
+	color: rgb(167, 167, 164);
+}
+.mega-menu-col1 a {
+	font-family: poppins;
+	font-size: 20px;
+	line-height: 35px;
+	color: rgb(223, 223, 221);
+}
+.mega-menu-wrap {
+	position: relative;
+	left: 50%;
+	width: 100%;
+	max-width: 1200px;
+	transform: translateX(-50%);
+}
+.mega-menu-wrap .column {
+	position: relative;
+	vertical-align: top;
+	display: inline-block;
+	margin: 0 30px;
+}
+
+.hero-container {
+	width: 100vw;
+	height: 98vh;
+	background-image: url(../img/images/apple\ hero.jpg);
+	background-position-x: center;
+	background-size: cover;
+	text-align: center;
+}
+
+.hero-container h1 {
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 50px;
+	font-family: poppins;
+	font-weight: 300;
+	text-shadow: 0 0 15px #000;
+}
+.hero-container p {
+	position: absolute;
+	top: calc(55% + 60px);
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 18px;
+	font-family: poppins;
+	font-weight: 300;
+	text-shadow: 0 0 15px #000;
+}
+
+.button {
+	position: absolute;
+	top: 72%;
+	height: 54px;
+	width: 135px;
+	border-radius: 26px;
+	transform: translateX(-50%);
+	padding: 12px;
+}
+
+.btn1 {
+	background-color: royalblue;
+	left: 33%;
+}
+.btn1 a {
+	font-size: 18px;
+	color: rgb(223, 223, 221);
+}
+.btn2 {
+	border: solid 3px royalblue;
+	left: 66%;
+}
+.btn2 a {
+	font-size: 18px;
+	color: royalblue;
+}
+.content {
+	background-color: #222;
+}
+.content-wrap {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	max-width: 1200px;
+	padding: 40px;
+}
+.cardbox {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 30px;
+}
+.card {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	height: 350px;
+	width: 24%;
+	min-width: 250px;
+	border-radius: 15px;
+	background-color: rgba(69, 69, 69, 0.6);
+	box-shadow: 0 0 8px rgba(7, 7, 7, 0.8),
+		inset 1px 2px 1px rgba(255, 255, 239, 0.15),
+		inset -1px -2px 1px rgba(7, 7, 7, 0.8);
+	transition: scale .3s, box-shadow .6s;
+	cursor: pointer;
+}
+
+.card:hover {
+	box-shadow: 0 0 25px 5px rgba(255, 238, 169, 0.556),
+	inset 1px 2px 1px rgba(255, 255, 239, 0.15),
+	inset -1px -2px 1px rgba(7, 7, 7, 0.8);
+	scale: 1.1;
+}
+
+.card-foto {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	transition: scale .2s; 
+}
+.card-foto1 {
+	background-image: url(../img/images/Apple-iPhone-16-Pro-hero-geo-240909_inline.jpg.large.jpg);
+}
+.card-foto2 {
+	background-image: url(../img/images/ipad.jpg);
+}
+.card-foto3 {
+	background-image: url(../img/images/watch.jpg);
+	background-position: -60px;
+}
+.card-foto4 {
+	background-position: -60px;
+	background-image: url(../img/images/airpods.png);
+}
+
+.card:hover > .card-foto {
+	scale: 1.2;
+}
+.card-text {
+	position: absolute;
+	width: 100%;
+	bottom: 20px;
+	text-align: center;
+}
